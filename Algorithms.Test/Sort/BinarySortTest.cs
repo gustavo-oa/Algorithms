@@ -18,7 +18,7 @@ namespace Algorithms.Test.Sort
                 data[i] = i;                
                         
             var valueToFind = 77;
-            var position = _algorithm.Find(data, valueToFind);
+            var position = _algorithm.FindIndex(data, valueToFind);
             
             Assert.Equal(77, position);
 
