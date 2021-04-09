@@ -4,12 +4,12 @@ namespace Algorithms.Sort
 {
     public class BinarySort
     {
-        public int Find(int[] data, int value)
+        public int FindIndex(int[] data, int value)
         {
-            return Find(data, value, 0, data.Length);
+            return FindIndex(data, value, 0, data.Length);
         }
 
-        private int Find(int[] data, int value, int start, int end) 
+        private int FindIndex(int[] data, int value, int start, int end) 
         {
             if (end < start)
                 return -1;
@@ -20,9 +20,9 @@ namespace Algorithms.Sort
                 return mid;
 
             if (data[mid] > value) 
-                return Find(data, value, start, mid -1);
+                return FindIndex(data, value, start, mid -1);
             
-            return Find(data, value, mid +1, end);
+            return FindIndex(data, value, mid +1, end);
         }
     }
 }
